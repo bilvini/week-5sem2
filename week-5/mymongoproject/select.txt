@@ -1,0 +1,4 @@
+db.Employees.find().pretty();
+db.Orders.find().pretty();
+db.Employees.find({}, { FirstName: 1, LastName: 1, _id: 0 }).pretty();
+db.Orders.find({}, { OrderID: 1, Amount: 1, _id: 0 }).pretty();

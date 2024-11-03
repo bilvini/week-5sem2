@@ -1,0 +1,2 @@
+db.Orders.find().sort({ OrderDate: 1 }).pretty(); // Ascending order
+db.Orders.find().sort({ CustomerName: 1 }).pretty();

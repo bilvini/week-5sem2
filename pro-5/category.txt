@@ -1,0 +1,1 @@
+db.MenuItems.find({ Category: "Appetizers" }).pretty();

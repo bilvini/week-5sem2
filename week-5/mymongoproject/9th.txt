@@ -1,0 +1,14 @@
+const employeeCount = db.Employees.countDocuments();
+print(`Number of employees: ${employeeCount}`);
+
+
+const orderCount = db.Orders.countDocuments();
+print(`Number of orders: ${orderCount}`);
+
+
+const averageOrderAmount = db.Orders.aggregate([
+    { $group: { _id: null, averageAmount: { $avg: "$Amount" } } }
+]).toArray()[0]?.averageAmount;
+print(`Average order amount: ${averageOrderAmount}`);
+
+

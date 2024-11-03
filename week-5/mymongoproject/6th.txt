@@ -1,0 +1,2 @@
+db.Employees.find({ Department: 'HR' }).pretty();
+db.Orders.find({ Amount: { $gt: 300 } }).pretty();

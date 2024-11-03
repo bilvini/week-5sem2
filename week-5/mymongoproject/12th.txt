@@ -1,0 +1,39 @@
+db.Employees.aggregate([
+    {
+        $lookup: {
+            from: "Orders",
+            localField: "EmployeeID", // Field from Employees
+            foreignField: "CustomerID", // Field from Orders
+            as: "orders"
+        }
+    },
+    {
+        $unwind: "$orders" // This will flatten the array of orders
+    },
+    {
+        $project: {
+            FirstName: 1,
+            LastName: 1,
+            Amount: "$orders.Amount"
+        }
+    }
+]).pretty();
+
+
+db.Employees.aggregate([
+    {
+        $lookup: {
+            from: "Orders",
+            localField: "EmployeeID",
+            foreignField: "CustomerID",
+            as: "orders"
+        }
+    },
+    {
+        $project: {
+            FirstName: 1,
+            LastName: 1,
+            OrderAmount: { $arrayElemAt: ["$orders.Amount", 0] } // Get the first order amount if available
+        }
+    }
+]).pretty();

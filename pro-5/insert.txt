@@ -1,0 +1,7 @@
+db.MenuItems.insertMany([
+    { ItemID: 1, Name: "Spring Rolls", Category: "Appetizers", Price: 5.99 },
+    { ItemID: 2, Name: "Caesar Salad", Category: "Appetizers", Price: 7.99 },
+    { ItemID: 3, Name: "Grilled Chicken", Category: "Entrees", Price: 12.99 },
+    { ItemID: 4, Name: "Spaghetti Bolognese", Category: "Entrees", Price: 11.99 },
+    { ItemID: 5, Name: "Chocolate Cake", Category: "Desserts", Price: 6.50 }
+]);

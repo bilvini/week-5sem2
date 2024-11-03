@@ -1,0 +1,3 @@
+db.Orders.aggregate([
+    { $group: { _id: "$CustomerID", totalSpent: { $sum: "$Amount" } } } // Assuming Amount field in Orders
+]).pretty();

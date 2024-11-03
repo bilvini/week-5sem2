@@ -1,0 +1,30 @@
+db.Employees.find({
+    $and: [
+        { Department: 'HR' },
+        { DateOfBirth: { $gt: new Date("1990-01-01") } }
+    ]
+}).pretty();
+
+
+db.Orders.find({
+    $and: [
+        { Amount: { $gt: 300 } },
+        { OrderDate: { $lt: new Date("2023-01-01") } }
+    ]
+}).pretty();
+
+
+db.Employees.find({
+    $or: [
+        { Department: 'HR' },
+        { Department: 'Finance' }
+    ]
+}).pretty();
+
+
+db.Orders.find({
+    $or: [
+        { Amount: { $lt: 100 } },
+        { OrderDate: { $gt: new Date("2023-01-01") } }
+    ]
+}).pretty();

@@ -1,0 +1,6 @@
+db.MenuItems.find({
+    $and: [
+        { Price: { $lt: 10 } }, // Price less than $10
+        { Available: true } // Available items
+    ]
+});

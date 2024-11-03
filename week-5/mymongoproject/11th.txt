@@ -1,0 +1,28 @@
+db.Employees.aggregate([
+    {
+        $group: {
+            _id: "$Department",
+            employeeCount: { $sum: 1 }
+        }
+    },
+    {
+        $match: {
+            employeeCount: { $gt: 5 }
+        }
+    }
+]).pretty();
+
+
+db.Orders.aggregate([
+    {
+        $group: {
+            _id: "$CustomerID",
+            totalAmount: { $sum: "$Amount" }
+        }
+    },
+    {
+        $match: {
+            totalAmount: { $gt: 1000 }
+        }
+    }
+]).pretty();

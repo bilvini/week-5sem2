@@ -1,0 +1,16 @@
+db.Employees.insertMany([
+    {
+        EmployeeID: 1,
+        FirstName: "John",
+        LastName: "Doe",
+        DateOfBirth: new Date("1990-01-15"),
+        Department: "Sales"
+    },
+    {
+        EmployeeID: 2,
+        FirstName: "Jane",
+        LastName: "Smith",
+        DateOfBirth: new Date("1985-03-22"),
+        Department: "Marketing"
+    }
+]);

@@ -1,0 +1,20 @@
+db.Orders.insertMany([
+    {
+        OrderID: 1,
+        OrderDate: new Date("2024-10-01"),
+        CustomerID: 101,
+        Amount: 250.00
+    },
+    {
+        OrderID: 2,
+        OrderDate: new Date("2024-10-02"),
+        CustomerID: 102,
+        Amount: 150.50
+    },
+    {
+        OrderID: 3,
+        OrderDate: new Date("2024-10-03"),
+        CustomerID: 103,
+        Amount: 300.75
+    }
+]);

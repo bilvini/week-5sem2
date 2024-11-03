@@ -1,0 +1,4 @@
+db.Orders.updateOne(
+    { OrderID: 123 }, // Replace with the actual order ID
+    { $set: { Status: "Prepared" } }
+);

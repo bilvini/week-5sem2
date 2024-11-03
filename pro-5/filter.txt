@@ -1,0 +1,6 @@
+db.Orders.find({
+    $or: [
+        { CustomerID: "customer123" }, // Replace with actual CustomerID
+        { OrderDate: { $gte: new Date("2023-01-01") } } // Filter by date
+    ]
+}).pretty();

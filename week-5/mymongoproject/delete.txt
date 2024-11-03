@@ -1,0 +1,4 @@
+db.Employees.deleteOne({ EmployeeID: 1 });
+db.Orders.deleteMany({ Amount: { $lt: 100 } });
+db.Employees.find().pretty();
+db.Orders.find().pretty();

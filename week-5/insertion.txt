@@ -1,0 +1,7 @@
+db.Employees.insertOne({
+    EmployeeID: 1,
+    FirstName: "Alice",
+    LastName: "Johnson",
+    DateOfBirth: new Date("1990-01-15"),
+    Department: "HR"
+});

@@ -1,0 +1,3 @@
+db.Orders.aggregate([
+    { $group: { _id: "$MenuItemID", totalOrders: { $sum: 1 } } } // Assuming MenuItemID in Orders
+]).pretty();

@@ -1,0 +1,2 @@
+db.Employees.find().sort({ LastName: 1 }).pretty();
+db.Orders.find().sort({ Amount: -1 }).pretty();

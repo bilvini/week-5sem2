@@ -1,0 +1,5 @@
+db.createCollection("MenuItems");
+db.createCollection("Orders");
+db.createCollection("Customers");
+db.createCollection("Employees");
+db.createCollection("Reservations");

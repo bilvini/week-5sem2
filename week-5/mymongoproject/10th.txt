@@ -1,0 +1,18 @@
+db.Employees.aggregate([
+    {
+        $group: {
+            _id: "$Department",
+            employeeCount: { $sum: 1 }
+        }
+    }
+]).pretty();
+
+
+db.Orders.aggregate([
+    {
+        $group: {
+            _id: "$CustomerID",
+            totalAmount: { $sum: "$Amount" }
+        }
+    }
+]).pretty();
